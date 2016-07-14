@@ -238,6 +238,52 @@ h2 {
 	height: 300px;
 	margin: 0 auto;
 	text-align: center;
+	position: relative;
+	transition: all 0.35s;
+}
+.sixgrid:hover {
+	background: #FFFDE7;
+}
+.sixgrid img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.9;
+	transition: all 0.35s;
+}
+.sixgrid:hover img {
+	opacity: 0.2;
+}
+.sixgrid h3 {
+	position: relative;
+	font-size: 26px;
+	font-weight: 200;
+	color: #484848;
+	opacity: 0;
+	-webkit-transform: translateY(400%);
+	        transform: translateY(400%);
+	transition: all 0.35s;
+}
+.sixgrid:hover h3 {
+	color: #484848;
+	opacity: 1;
+	-webkit-transform: translateY(200%);
+	        transform: translateY(200%);
+}
+.sixgrid p {
+	position: relative;
+	width: 200px;
+	margin: 0 auto;
+	font-size: 18px;
+	color: #484848;
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	        transform: translateY(100%);
+	transition: all 0.35s;
+}
+.sixgrid:hover p {
+	color: #484848;
+	opacity: 1;
 }
 /*end function*/
 
