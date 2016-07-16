@@ -1,4 +1,4 @@
-Generic Styles*/
+/*Generic Styles*/
 * {
 	margin: 0;
 	padding: 0;
@@ -471,3 +471,87 @@ h2 {
 }
 
 /*end tech_platform
+
+/*footer*/
+.footer {
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 70px;
+	overflow: hidden;
+}
+.footer-content-left {
+	float: left;
+	width: 40%;
+	margin-left: 15%;
+}
+.footer-knockiimg {
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+.input_email input{
+	float: left;
+	width: 200px;
+	height: 20px;
+	margin: 10px 20px 0px 10px;
+}
+.submit_sharelink input {
+	background: #00b0ae;
+	color: #FFF;
+	width: 80px;
+	height: 30px;
+	margin: 10px auto;
+	border: none;
+	border-radius: 50px;
+}
+
+.footer-content-left p {
+	margin: 10px auto;
+	font-size: 13px;
+}
+.cards {
+	margin: 10px auto;
+	overflow: hidden;
+}
+.cards li{
+	float: left;
+	margin-right: 10px;
+}
+.footer-content-right {
+	float: left;
+	width: 20%;
+	margin-left: 10%;	
+}
+.quick-links-1 {
+	float: left;
+	width: 40%;
+	margin-right: 2%;
+}
+.quick-links-2 {
+	float: right;
+}
+.link_title {
+	color: #2a3c3e;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.quick-links-1 li a,.quick-links-2 li a{
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.footer-info {
+	clear: both;
+	padding-top: 70px;
+}
+.footer-info p {
+	text-align: center;
+	margin: 0 0 0.75em;
+	padding: 0 40px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #7b858b;
+}
+.footer-info a {
+	font-size: 0.7em;
+}
+/*end footer*/
