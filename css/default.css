@@ -15,9 +15,6 @@ ul {
 a {
 	text-decoration: none;
 }
-a:hover {
-	color: #008c8a
-}
 p {
 	font-size: 22px;
 	line-height: 38px;
@@ -149,7 +146,7 @@ h2 {
 .home-info p {
 	color: #FFFDE7;
 	font-size: 19px;
-	width: 70%;
+	width: 80%;
 	margin: 0 auto;
 }
 .home-info-price a {
@@ -302,7 +299,7 @@ h2 {
 	margin-right: 327px;
 	padding: 36px 0px;
 	text-align: center;
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 	border-radius: 25px;
 }
 .setup-info h2 {
@@ -336,19 +333,18 @@ h2 {
 }
 .attach_remove-info h2 {
 	color: #fff;
-	width: 65%;
-	padding-top: 120px;
-	font-size: 54px;
+	width: 80%;
+	padding-top: 170px;
 	font-weight: 100;
 	text-align: center;
 }
 .attach_remove-info li {
-	color: #FFF;
-	line-height: 68px;
-	font-size: 24px;
+	color: #fff;
+	line-height: 54px;
+	font-size: 22px;
 	font-weight: 100;
-	padding-top: 5px;
-	padding-left: 550px;
+	padding-top: 25px;
+	padding-left: 610px;
 }
 /*end attach_remove*/
 
@@ -426,7 +422,7 @@ h2 {
 }
 .tech_platform-left-info h2 {
 	color: #FFF;
-	padding-top: 160px;
+	padding-top: 100px;
 	font-size: 32px;
 	line-height: 36px;
 }
@@ -456,7 +452,7 @@ h2 {
 }
 .tech_platform-right-info h2 {
 	color: #FFF;
-	padding-top: 160px;
+	padding-top: 100px;
 	font-size: 32px;
 	line-height: 36px;
 }
@@ -492,7 +488,11 @@ h2 {
 	float: left;
 	width: 200px;
 	height: 20px;
-	margin: 10px 20px 0px 10px;
+	margin: 10px 20px 0px 0px;
+}
+
+.input_email input:focus {
+	outline: #00b0ae auto 2px;
 }
 .submit_sharelink input {
 	background: #00b0ae;
@@ -502,8 +502,11 @@ h2 {
 	margin: 10px auto;
 	border: none;
 	border-radius: 50px;
+	outline: none;
 }
-
+.submit_sharelink input:focus {
+	background: #008c8a;
+}
 .footer-content-left p {
 	margin: 10px auto;
 	font-size: 13px;
@@ -535,8 +538,12 @@ h2 {
 	margin-bottom: 10px;
 }
 .quick-links-1 li a,.quick-links-2 li a{
+	color: #7b858b;
 	font-size: 14px;
 	margin-bottom: 10px;
+}
+.quick-links-1 li a:hover,.quick-links-2 li a:hover {
+	color: #00b0ae;
 }
 .footer-info {
 	clear: both;
@@ -553,5 +560,9 @@ h2 {
 }
 .footer-info a {
 	font-size: 0.7em;
+	color: #7b858b;
+}
+.footer-info a:hover {
+	color: #00b0ae;
 }
 /*end footer*/
