@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Knocki</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/reset.css">
@@ -14,9 +14,13 @@
     <div class="header">
         <div class="navigation-wrapper">
             <div class="logo">
-                <a href="#"><img src="images/logo.png"></a>
+                <a href="#"><img src="images/logo.png" alt="logo"></a>
             </div>
             <!-- end logo -->
+            <div class="navigation-tools">
+                <a href="#" class="btn btn-border"><img src="images/cart.png" alt="" class="cart">Buy Now</a>
+            </div>
+            <!-- end navigation-tools -->
             <div class="primary-navigation">
                 <ul>
                     <li><a href="#">Products</a></li>
@@ -26,17 +30,25 @@
                     <li><a href="#">Support</a></li>
                 </ul>
             </div>
-            <!-- end primary-navigation -->
-            <div class="navigation-tools">
-                <a href="#" class="btn btn-border"><img src="images/cart.png" alt="" class="cart">Buy Now</a>
-            </div>
-            <!-- end navigation-tools -->
+            <!-- end primary-navigation -->           
         </div>
         <!-- end navigation-wrapper -->
+        <div class="mobile-menu">
+            <span></span>
+        </div>
+        <div class="mobile-menu-overlay"></div>
+        <div class="mobile-menu-info">
+            <li>MENU</li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">The app</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Support</a></li>
+        </div>
     </div>
     <!-- end header -->
     <div class="content">
-        <div class="home">        	
+        <div class="home">       	
             <div class="home-info">
                 <img src="images/home-logo.png" alt="">
                 <h1>Make any Surface Smart</h1>
@@ -229,6 +241,14 @@
         <!-- end footer-content -->
     </div>
     <!-- end footer -->
+    <script   src="https://code.jquery.com/jquery-2.1.4.min.js"   integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="   crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(".mobile-menu").on('click',function(){
+            $("body").toggleClass('menu-open');
+        });
+        $(".mobile-menu-overlay").on('click',function(){
+            $("body").removeClass('menu-open');
+        });
+    </script>
 </body>
-
 </html>
