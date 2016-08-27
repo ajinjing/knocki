@@ -106,7 +106,7 @@
                 <!-- end func-grid-post4 -->
                 <div class="sixgrid">
                     <img class="object-fit" src="images/post5-bg.png" alt="">
-                    <h3 class="unselect">Door knock Sends a Text</h3>
+                    <h3 class="unselect">Door Knock Alert</h3>
                     <p class="unselect">Lorem ipsum dolor sit amet,consectetur adipisicing elit.</p>
                 </div>
                 <!-- end func-grid-post5 -->
@@ -184,15 +184,11 @@
     <div class="footer">
             <div class="footer-content-left">
                 <img src="images/logo.png" alt="knocki" class="footer-knockiimg">
-                <div class="input_email">
-                    <input type="email" name="email">
-                </div>
-                <!-- end input_email -->
-                <div class="submit_sharelink">
-                    <input type="submit" name="submit" value="Share Email">
-                </div>
-                <!-- end submit_sharelink -->
-                <p>&copy;&nbsp;2016 Knocki.</p>
+                <form action="" method="post" id="email-info">
+                        <input type="email" name="email" placeholder="Enter your email" class="input_email">
+                        <input type="submit" name="submit" value="Share Email" id="shareemail" class="submit_sharelink">
+                </form>
+                <p class="copy">&copy;&nbsp;2016 Knocki.</p>
                 <ul class="cards">
                     <li><img src="images/icon-visa.png" alt="visa"></li>
                     <li><img src="images/icon-mastercard.png" alt="mastercard"></li>
@@ -248,6 +244,18 @@
         });
         $(".mobile-menu-overlay").on('click',function(){
             $("body").removeClass('menu-open');
+        });
+        $("a").on('click', function(event) {
+            event.preventDefault();
+        });
+        $("#shareemail").on('click', function() {
+            event.preventDefault();
+            var newnode = document.createElement("p");
+            newnode.className = "submitted";
+            var newnodeText = document.createTextNode("Thank You!");
+            newnode.appendChild(newnodeText);
+            var oldnode = document.getElementById("email-info");
+            oldnode.parentNode.replaceChild(newnode, oldnode);
         });
     </script>
 </body>
