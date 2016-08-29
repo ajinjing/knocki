@@ -51,8 +51,8 @@
         <div class="home">       	
             <div class="home-info">
                 <img src="images/home-logo.png" alt="">
-                <h1>Make any Surface Smart</h1>
-                <p>Knocki is a smart device that gives you control of your favorite functions through the surfaces around you.</p>
+                <h1>Make Any Surface Smart</h1>
+                <p>Knocki is a smart device that gives your control of your favorite functions through the surfaces around you.</p>
                 <div class="home-info-price">
                     <a href="#" class="btn btn-border">Buy Now for $ 89</a>
                 </div>
@@ -184,9 +184,10 @@
     <div class="footer">
             <div class="footer-content-left">
                 <img src="images/logo.png" alt="knocki" class="footer-knockiimg">
-                <form action="" method="post" id="email-info">
-                        <input type="email" name="email" placeholder="Enter your email" class="input_email">
-                        <input type="submit" name="submit" value="Share Email" id="shareemail" class="submit_sharelink">
+                <form action="" method="post" id="email-info" class="email-info">
+                        <input type="email" name="email" placeholder="Enter your email" autocomplete="off" maxlength="30" class="input_email" id="input_email">
+                        <input type="submit" name="submit" value="Share Email" id="share_email" class="submit_sharelink">
+                        <div class="field-help">examplename@email.com</div>
                 </form>
                 <p class="copy">&copy;&nbsp;2016 Knocki.</p>
                 <ul class="cards">
@@ -248,14 +249,37 @@
         $("a").on('click', function(event) {
             event.preventDefault();
         });
-        $("#shareemail").on('click', function() {
-            event.preventDefault();
-            var newnode = document.createElement("p");
-            newnode.className = "submitted";
-            var newnodeText = document.createTextNode("Thank You!");
-            newnode.appendChild(newnodeText);
-            var oldnode = document.getElementById("email-info");
-            oldnode.parentNode.replaceChild(newnode, oldnode);
+        function validate_email(email) {
+            var reg = new RegExp(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/);
+            return reg.test(email);
+        }
+        var form = document.getElementById('email-info');
+        var notice = document.createElement("p"); 
+        notice.className = "error_notice";
+        $("#share_email").on('click', function() {
+               event.preventDefault();
+               var email = $("#input_email").val();
+               if (validate_email(email)) {
+                   var newnode = document.createElement("p");
+                   newnode.className = "submitted";
+                   var newnodeText = document.createTextNode("Thank You!");
+                   newnode.appendChild(newnodeText);
+                   var oldnode = document.getElementById("email-info");
+                   oldnode.parentNode.replaceChild(newnode, oldnode);
+                   $(".footer-knockiimg").addClass("footer-knockiimg-rotate");
+               }
+               else {
+                   if (email=== "") {
+                        notice.innerHTML = "Please complete this mandatory field.";
+                   }
+                   else {
+                        notice.innerHTML = "Email must be formatted correctly.";
+                   }
+                   form.appendChild(notice);
+               }
+        });
+        $(".input_email").focus(function() {
+            $(".field-help").addClass('field-help_focus');
         });
     </script>
 </body>

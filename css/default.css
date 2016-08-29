@@ -936,7 +936,18 @@ h2 {
 	border-radius: 50%;
 	margin-bottom: 20px;
 }
-#email-info {
+.footer-knockiimg-rotate {
+	animation: 1s submitcorrect;
+}
+@keyframes submitcorrect {
+	from {
+		transform: rotate3d(0,0,1,0deg);
+	}
+	to {
+		transform: rotate3d(0,0,1,720deg);
+	}
+}
+.email-info {
 	margin: 5px auto;
 }
 .input_email {
@@ -968,6 +979,7 @@ h2 {
 	font-size: 14px;
 	border: 0px;  
 	border-radius: 4px;
+	outline: 0;
   cursor: pointer;
   vertical-align: top;
 }
@@ -978,7 +990,25 @@ h2 {
 	font-size: 24px;
 	color: #7b858b;
 }
-.footer-content-left .copy {
+.error_notice {
+	font-size: 16px;
+	font-weight: 400;
+	color: tomato;
+}
+.field-help {
+	margin: 0;	
+	padding: 0;
+	font-size: 14px;
+	color: #777;
+	max-height: 0;
+	overflow: hidden;
+	transition: padding 0.2s;
+}
+.field-help_focus {
+	padding: 10px 0;
+	max-height: 100px;	
+}
+.copy {
 	margin: 10px auto;
 	font-size: 13px;
 	font-weight: 400;
@@ -1052,7 +1082,11 @@ h2 {
 		display: inline-block;
 		margin-bottom: 10px;
 	}
-	.footer-content-left p {
+	.email-info {
+		width: 310px;
+		text-align: left;
+	}
+	.copy {
 		margin: 0 auto;
 	}
 	.cards {
